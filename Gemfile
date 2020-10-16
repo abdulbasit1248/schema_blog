@@ -28,6 +28,7 @@ gem 'devise'
 gem 'hirb'
 gem 'jwt'
 gem 'fast_jsonapi'
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
