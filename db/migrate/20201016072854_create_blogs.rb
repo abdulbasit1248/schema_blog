@@ -4,6 +4,7 @@ class CreateBlogs < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.timestamps
+      t.references :user, foreign_key: {on_delete: :cascade}
     end
   end
 end
