@@ -32,7 +32,7 @@ class Api::V1::BlogsController < Api::V1::ApiController
 
   private
     def blog_params
-      params.require(:blog).permit(:title, :description)
+      params.require(:blog).permit(:title, :description, comments_attributes:[:comment_body])
     end
 
     # def options
