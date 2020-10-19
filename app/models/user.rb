@@ -7,9 +7,9 @@ class User < ApplicationRecord
   has_many :blogs
 
 
-  # def self.authenticate(email, password)
-  #   athlete = find_for_authentication(email: email)
-  #   return nil unless athlete.present?
-  #   athlete.valid_password?(password) ? athlete : nil
-  # end
+  def self.authenticate(email, password)
+    user = find_for_authentication(email: email)
+    return nil unless user.present?
+    user.valid_password?(password) ? user : nil
+  end
 end
