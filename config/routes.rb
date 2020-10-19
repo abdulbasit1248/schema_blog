@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       # resources :profiles, only: [:create, :show]
       resource :profile, only: [:create, :show]
       resource :session, only: [:create]
+      resources :blogs, only: [:create, :show, :index, :update]
     end
   end
 end
